@@ -1,0 +1,64 @@
+﻿
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <button class="btn btn-danger" id="add-rows">Add Row</button>
+        <button class="btn btn-dark" id="add-with-modal">Add With Modal</button>
+        <form style="margin-top: 10px;" method="post" action="/home/add">
+            <div id="ppl-rows">
+                <div class="row person-row" style="margin-bottom: 10px;">
+                    <div class="col-md-3">
+                        <input class="form-control first-name" type="text" name="people[0].firstname" placeholder="First Name" />
+                    </div>
+                    <div class="col-md-3">
+                        <input class="form-control last-name" type="text" name="people[0].lastname" placeholder="Last Name" />
+                    </div>
+                    <div class="col-md-3">
+                        <input class="form-control age" type="text" name="people[0].age" placeholder="Age" />
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-danger delete">Delete</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+<div class="modal fade" id="demo-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" action="/home/addsingle">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Person</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-12 bg-light rounded-3 p-5">
+                        <h1>Add Person</h1>
+
+                        <input type="text" class="form-control" placeholder="First Name" name="firstname" />
+                        <br />
+                        <input type="text" class="form-control" placeholder="Last Name" name="lastname" />
+                        <br />
+                        <input type="text" class="form-control" placeholder="Age" name="age" />
+                        <br />
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary">Add Person</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="/js/add.js"></script>
+    <script src="/js/add-modal.js"></script>
+}

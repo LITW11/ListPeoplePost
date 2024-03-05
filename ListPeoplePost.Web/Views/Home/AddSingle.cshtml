@@ -1,0 +1,20 @@
+﻿<div style="height: 80vh;" class="row justify-content-center align-items-center">
+    <div class="col-md-6 bg-light rounded-3 p-5">
+        <h1>Add Person</h1>
+        <form method="post" action="/home/addsingle">
+            <input type="text" class="form-control" placeholder="First Name" name="firstname" />
+            <br />
+            <input type="text" class="form-control" placeholder="Last Name" name="lastname" />
+            <br />
+            <input type="text" class="form-control" placeholder="Age" name="age" />
+            <br />
+            <div class="form-check form-switch">
+                <input class="form-check-input" style="width:50px;height:25px;" name="isawesome" type="checkbox" value="true" />
+                <label class="form-check-label">Is Awesome</label>
+            </div>
+            <div class="d-grid gap-2 mt-3">
+                <button class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

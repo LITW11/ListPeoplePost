@@ -1,0 +1,30 @@
+﻿@model HomePageViewModel
+<div class="row">
+@*     @if (!String.IsNullOrEmpty(Model.Message))
+    {
+        <div class="col-md-12">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @Model.Message
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    } *@
+    <div class="col-md-12">
+        <a href="/home/add" class="btn btn-success">Add People</a>
+        <table class="table table-hover table-bordered">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+            @foreach (var person in Model.People)
+            {
+                <tr>
+                    <td>@person.FirstName</td>
+                    <td>@person.LastName</td>
+                    <td>@person.Age</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
